@@ -17,13 +17,13 @@ const regularUser = {
     fullName: {
         userFullName: {
             firstName: "Kuldeep",
-            lastName: "Yadav"
+            lastName: "Yadav",
         }
     }
 }
 
-console.log(regularUser.fullName);
-console.log(regularUser.fullName.userFullName.firstName);
+// console.log(regularUser.fullName);
+// console.log(regularUser.fullName.userFullName.firstName);
 
 //**When we want to combine two objects */
 
@@ -49,9 +49,9 @@ const Obj3 = Object.assign(obj1, obj2, obj5)
 
 // Spread can also be user
 const obj6 = { ...obj1, ...obj2, ...Obj3 }
-console.log(Obj3);
-// console.log(Obj4);
-console.log(obj6);
+// console.log(Obj3);
+// // console.log(Obj4);
+// console.log(obj6);
 
 
 // when we receive the values by database, we usually get arrays of objects
@@ -67,13 +67,37 @@ const user = [
     }
 ]
 
-console.log((user[1].email));  // Undefined
+// console.log((user[1].email));  // Undefined
 
-console.log(tinderUser);
+// console.log(tinderUser);
 
-console.log(Object.keys(tinderUser));  //The output of this is an array, so we can loop in it if we want
-console.log(Object.values(tinderUser));  //The output of this is an array, so we can loop in it if we want
-console.log(Object.entries(tinderUser));  // key value pairs individual as an object
+// console.log(Object.keys(tinderUser));  //The output of this is an array, so we can loop in it if we want
+// console.log(Object.values(tinderUser));  //The output of this is an array, so we can loop in it if we want
+// console.log(Object.entries(tinderUser));  // key value pairs individual as an object
 
-console.log(tinderUser.hasOwnProperty("isloggedIn"));
+// console.log(tinderUser.hasOwnProperty("isloggedIn"));
 
+
+////** Destructing of Objects */
+
+const course = {
+    name: "JsInHindi",
+    price: "999",
+    courseInstructor: "Hitesh",
+}
+
+const { courseInstructor } = course
+const { courseInstructor: instructor } = course
+
+console.log(courseInstructor);
+
+// {
+//     "name": "Kuldeep",
+//         "courseName": "Js  in hindi",
+//             "price": "free",
+// }
+
+// [
+//     {},
+//     {}
+// ]
